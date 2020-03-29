@@ -86,3 +86,26 @@ for(i=0;i<3;i++)
 {
 	s[i].ftk=s[i].food_taken_time;
 }
+//calculating total time T 
+for(i=0;i<3;i++)
+{
+	T+=s[i].food_taken_time;
+}
+printf("\n");
+
+//executing processes
+execution();
+	
+//calculating values for Total Waiting time
+int Twt=0;
+for(i=0;i<3;i++)
+{
+	//Total time taken=completion time-arrival time
+	s[i].total_time=s[i].completion_time - s[i].arrival_time;
+	
+	// waiting time= total time taken - burst time
+	s[i].waiting_time= s[i].total_time -s[i].ftk;
+	
+	//calculating Total Waiting Time
+	Twt= Twt+s[i].waiting_time;
+}
