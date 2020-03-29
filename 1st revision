@@ -122,3 +122,11 @@ for(i=0;i<3;i++)
 {
 printf ("S%d\t\t%d\t %d\t %d\t %d\t %d\t %d\n",i,s[i].stu_id,s[i].arrival_time,s[i].ftk,s[i].waiting_time,s[i].total_time,s[i].completion_time); 
 }
+printf("\nTOTAL WAITING TIME:%d\n",Twt);
+// average total waiting time
+float aTwt=(float)Twt/3;   
+printf("AVERAGE WAITING TIME:%f\n",aTwt);
+printf("TURN AROUND TIME:%d\n",totalTAT);
+float atotalTAT=(float)totalTAT/3;
+printf("AVERAGE TURN AROUND TIME:%f\n",atotalTAT);
+}
